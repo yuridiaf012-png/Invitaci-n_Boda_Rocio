@@ -1,0 +1,1268 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:
+
+    linear-gradient(
+    rgba(247,238,229,.55),
+    rgba(247,238,229,.55)
+    ),
+
+    url("img/fondo-jardin.jpg");
+
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:#4b3428;
+    font-family:'Cormorant Garamond',serif;
+    overflow-x:hidden;
+
+}
+
+
+h1,h2{
+
+    font-family:'Great Vibes',cursive;
+    font-weight:400;
+
+}
+
+
+#contenido{
+
+    display:none;
+
+}
+
+
+
+/* =====================
+      SOBRE INICIAL
+===================== */
+
+
+.sobre{
+
+position:fixed;
+
+width:100%;
+height:100vh;
+
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+
+z-index:9999;
+
+
+
+background:
+
+linear-gradient(
+rgba(30,20,10,.35),
+rgba(30,20,10,.55)
+),
+
+url("img/fondo-jardin.jpg");
+
+
+background-size:cover;
+background-position:center;
+
+
+}
+
+
+
+/* flores reales */
+
+.flores{
+
+
+position:absolute;
+
+width:300px;
+height:300px;
+
+
+background:url("img/flores.png");
+
+background-size:contain;
+background-repeat:no-repeat;
+
+
+z-index:2;
+
+
+}
+
+
+
+.flores-izq{
+
+top:0;
+left:0;
+
+}
+
+
+
+.flores-der{
+
+top:0;
+right:0;
+
+transform:scaleX(-1);
+
+}
+
+
+
+
+
+/* SOBRE */
+
+.sobre-carta{
+
+
+width:360px;
+height:240px;
+
+
+background:
+
+linear-gradient(
+145deg,
+#fffdf8,
+#ead9c4
+);
+
+
+
+border-radius:10px;
+
+
+position:relative;
+
+
+padding:70px 20px;
+
+
+text-align:center;
+
+
+box-shadow:
+
+0 30px 70px #0008;
+
+
+border:1px solid #d6b997;
+
+
+animation:flotar 3s infinite alternate;
+
+
+z-index:5;
+
+
+}
+
+
+
+.sobre-carta::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+left:0;
+
+
+border-left:180px solid transparent;
+border-right:180px solid transparent;
+border-top:95px solid #dfc6aa;
+
+
+}
+
+
+
+.sobre h2{
+
+
+font-size:55px;
+
+color:#8b2635;
+
+
+position:relative;
+
+z-index:3;
+
+
+}
+
+
+
+.sobre p{
+
+
+font-size:28px;
+
+line-height:1.2;
+
+color:#6b4b3e;
+
+
+position:relative;
+
+z-index:3;
+
+
+font-family:'Cormorant Garamond',serif;
+
+
+}
+
+
+
+
+.sello{
+
+
+width:70px;
+height:70px;
+
+
+background:#7b1e2b;
+
+
+border-radius:50%;
+
+
+margin:25px auto;
+
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+
+color:white;
+
+font-size:25px;
+
+
+box-shadow:
+
+0 8px 20px #0005;
+
+
+position:relative;
+
+z-index:4;
+
+
+}
+
+
+
+
+@keyframes flotar{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-12px);
+
+}
+
+
+}
+
+
+
+
+
+
+/* =====================
+        PORTADA
+===================== */
+
+
+.anillos{
+
+    width:clamp(55px,13vw,90px);
+
+    margin-bottom:12px;
+
+    opacity:.95;
+
+    filter:
+        drop-shadow(0 3px 8px rgba(0,0,0,.25));
+
+    animation:flotarAnillos 3s ease-in-out infinite;
+
+}
+
+@keyframes flotarAnillos{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.hero{
+
+min-height:100vh;
+
+position:relative;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:60px 20px;
+
+overflow:hidden;
+
+}
+
+
+
+.hero > img{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+z-index:0;
+
+
+}
+
+
+
+.filtro{
+
+position:absolute;
+
+inset:0;
+
+
+background:
+
+linear-gradient(
+rgba(40,20,10,.25),
+rgba(40,20,10,.65)
+);
+
+z-index:1;
+
+
+}
+
+
+
+
+.texto{
+
+
+position:relative;
+
+
+text-align:center;
+
+
+color:white;
+
+
+width:90%;
+
+max-width:480px;
+
+z-index:2;
+
+
+}
+
+
+
+
+.texto h1{
+
+
+font-size:80px;
+
+
+text-shadow:0 5px 15px #0008;
+
+
+}
+
+
+
+.texto p{
+
+
+font-size:28px;
+
+
+}
+
+
+
+
+/* =====================
+        CONTADOR
+===================== */
+
+
+.contador{
+
+
+padding:60px 20px;
+
+text-align:center;
+
+
+}
+
+
+
+.contador h2{
+
+font-size:55px;
+
+}
+
+
+
+.tiempo{
+
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+
+}
+
+
+
+
+.tiempo div{
+
+
+background:rgba(255,255,255,.85);
+
+backdrop-filter:blur(4px);
+-webkit-backdrop-filter:blur(4px);
+
+padding:20px;
+
+
+width:90px;
+
+
+border-radius:15px;
+
+
+box-shadow:0 8px 20px #0002;
+
+border:1px solid #d6b997;
+
+
+}
+
+
+
+
+.tiempo span{
+
+
+font-size:35px;
+
+color:#8b2635;
+
+font-weight:bold;
+
+
+}
+
+
+
+.tiempo p{
+
+color:#6b4b3e;
+
+font-weight:600;
+
+}
+
+
+
+
+
+/* =====================
+        TARJETAS
+===================== */
+
+
+section:not(.hero){
+
+padding:70px 25px;
+
+text-align:center;
+
+}
+
+
+
+
+.tarjeta,
+.evento,
+.regalos,
+.confirmar,
+.contador,
+.programa,
+.galeria,
+.vestimenta{
+
+
+background:
+
+linear-gradient(
+rgba(40,20,10,.62),
+rgba(40,20,10,.85)
+),
+
+url("img/fondo-jardin.jpg");
+
+background-size:cover;
+background-position:center;
+
+
+margin:20px;
+
+
+border-radius:25px;
+
+
+box-shadow:0 10px 25px #0004;
+
+
+border:1px solid #d6b997;
+
+
+color:#f5ece0;
+
+
+}
+
+
+
+
+.tarjeta h2,
+.evento h2,
+.regalos h2,
+.confirmar h2,
+.galeria h2,
+.programa h2,
+.contador h2,
+.vestimenta h2{
+
+
+font-size:55px;
+
+
+margin-bottom:20px;
+
+
+color:#fff;
+
+text-shadow:0 3px 12px rgba(0,0,0,.55);
+
+
+}
+
+
+
+.tarjeta h2::after,
+.evento h2::after,
+.regalos h2::after,
+.confirmar h2::after,
+.galeria h2::after,
+.programa h2::after,
+.contador h2::after,
+.vestimenta h2::after{
+
+
+content:"";
+
+display:block;
+
+width:70px;
+
+height:2px;
+
+background:#e8c98a;
+
+margin:10px auto 0;
+
+
+}
+
+
+
+.tarjeta p,
+.evento h3,
+.evento p,
+.regalos p,
+.confirmar p,
+.programa .subtitulo,
+.vestimenta h3,
+.vestimenta p{
+
+color:#f5ece0;
+
+text-shadow:0 2px 8px rgba(0,0,0,.4);
+
+}
+
+
+
+.icono-blanco{
+
+display:inline-block;
+
+filter:brightness(0) invert(1);
+
+}
+
+
+
+.regalo{
+
+display:inline-block;
+
+margin:10px 8px;
+
+padding:12px 24px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.4);
+
+border-radius:20px;
+
+color:#fff;
+
+}
+
+
+
+
+
+
+button,
+.confirmar a,
+.btn-ubicacion{
+
+
+display:inline-block;
+
+margin-top:20px;
+
+
+padding:14px 30px;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+background:#8b2635;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+}
+
+
+
+
+
+
+/* RECEPCION - acento extra */
+
+.madera{
+
+border-top:2px solid #d6b997;
+border-bottom:2px solid #d6b997;
+
+}
+
+
+
+
+
+
+/* PROGRAMA - LINEA DE TIEMPO */
+
+
+.programa .subtitulo{
+
+font-size:20px;
+
+color:#f5ece0;
+
+text-shadow:0 2px 10px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.9);
+
+margin-bottom:45px;
+
+}
+
+
+
+.linea-tiempo{
+
+position:relative;
+
+max-width:480px;
+
+margin:0 auto;
+
+}
+
+
+
+.linea-tiempo::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:#d6b997;
+
+transform:translateX(-50%);
+
+}
+
+
+
+.evento-tiempo{
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+margin:35px 0;
+
+}
+
+
+
+.texto-tiempo{
+
+width:50%;
+
+text-align:right;
+
+padding-right:30px;
+
+}
+
+
+
+.texto-tiempo h3{
+
+font-size:22px;
+
+color:#e8c98a;
+
+font-family:'Cormorant Garamond',serif;
+
+font-weight:600;
+
+}
+
+
+
+.texto-tiempo p{
+
+font-size:18px;
+
+color:#f5ece0;
+
+}
+
+
+
+.icono-tiempo{
+
+width:50%;
+
+text-align:left;
+
+padding-left:30px;
+
+font-size:32px;
+
+opacity:.9;
+
+}
+
+
+
+.punto-tiempo{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+background:#8b2635;
+
+border:3px solid #fdf8f0;
+
+box-shadow:0 0 0 2px #d6b997;
+
+z-index:2;
+
+}
+
+
+
+.evento-tiempo.derecha .texto-tiempo{
+
+order:2;
+
+text-align:left;
+
+padding-left:30px;
+
+padding-right:0;
+
+}
+
+
+
+.evento-tiempo.derecha .icono-tiempo{
+
+order:1;
+
+text-align:right;
+
+padding-right:30px;
+
+padding-left:0;
+
+}
+
+
+
+@media(max-width:600px){
+
+.icono-tiempo{
+
+font-size:24px;
+
+}
+
+.texto-tiempo h3{
+
+font-size:18px;
+
+}
+
+.texto-tiempo p{
+
+font-size:14px;
+
+}
+
+.texto-tiempo{
+
+padding-right:15px;
+
+}
+
+.icono-tiempo{
+
+padding-left:15px;
+
+}
+
+.evento-tiempo.derecha .texto-tiempo{
+
+padding-left:15px;
+
+}
+
+.evento-tiempo.derecha .icono-tiempo{
+
+padding-right:15px;
+
+}
+
+}
+
+
+
+
+
+
+
+/* GALERIA - CARRUSEL */
+
+
+.carrusel{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+max-width:450px;
+
+margin:30px auto 0;
+
+}
+
+
+
+.contenedor-fotos{
+
+position:relative;
+
+width:100%;
+
+max-width:340px;
+
+height:420px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px #0003;
+
+border:1px solid #d6b997;
+
+}
+
+
+
+.foto{
+
+position:absolute;
+
+inset:0;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+opacity:0;
+
+transition:opacity .6s ease;
+
+pointer-events:none;
+
+}
+
+
+
+.foto.activa{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+
+
+.btn{
+
+width:42px;
+
+height:42px;
+
+flex-shrink:0;
+
+border:none;
+
+border-radius:50%;
+
+background:#8b2635;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+box-shadow:0 6px 15px #0003;
+
+transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+background:#6b1c28;
+
+transform:scale(1.08);
+
+}
+
+
+
+.puntos{
+
+display:flex;
+
+justify-content:center;
+
+gap:8px;
+
+margin-top:18px;
+
+}
+
+
+
+.punto{
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#d6b997;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+
+.punto.activo{
+
+width:26px;
+
+border-radius:5px;
+
+background:#8b2635;
+
+}
+
+
+
+@media(max-width:600px){
+
+.contenedor-fotos{
+
+height:340px;
+
+}
+
+.btn{
+
+width:36px;
+
+height:36px;
+
+font-size:17px;
+
+}
+
+}
+
+
+
+
+
+/* =====================
+       CELULAR
+===================== */
+
+
+@media(max-width:600px){
+
+.sobre-carta{
+
+
+width:85%;
+
+
+}
+
+
+
+.flores{
+
+
+width:180px;
+
+height:180px;
+
+
+}
+
+
+
+.texto h1{
+
+
+font-size:55px;
+
+
+}
+
+
+
+.texto p{
+
+
+font-size:20px;
+
+
+}
+
+
+
+.tiempo div{
+
+
+width:75px;
+
+
+padding:15px 5px;
+
+
+}
+
+
+
+.tiempo span{
+
+
+font-size:28px;
+
+
+}
+
+
+
+.fotos{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.tarjeta h2,
+.evento h2,
+.regalos h2,
+.confirmar h2,
+.galeria h2,
+.programa h2{
+
+
+font-size:45px;
+
+
+}
+
+
+
+}
