@@ -992,15 +992,11 @@ padding-right:15px;
 
 .carrusel{
 
-display:flex;
+position:relative;
 
-align-items:center;
+width:100%;
 
-justify-content:center;
-
-gap:12px;
-
-max-width:450px;
+max-width:380px;
 
 margin:30px auto 0;
 
@@ -1014,9 +1010,7 @@ position:relative;
 
 width:100%;
 
-max-width:340px;
-
-height:420px;
+aspect-ratio:4/5;
 
 border-radius:20px;
 
@@ -1064,27 +1058,55 @@ pointer-events:auto;
 
 .btn{
 
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
 width:42px;
 
 height:42px;
 
-flex-shrink:0;
-
-border:none;
+border:1px solid rgba(255,255,255,.6);
 
 border-radius:50%;
 
-background:#8b2635;
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(3px);
+
+-webkit-backdrop-filter:blur(3px);
 
 color:white;
+
+text-shadow:0 1px 4px rgba(0,0,0,.6);
 
 font-size:20px;
 
 cursor:pointer;
 
-box-shadow:0 6px 15px #0003;
+box-shadow:0 4px 12px rgba(0,0,0,.25);
 
 transition:.3s;
+
+z-index:5;
+
+}
+
+
+
+.btn.izquierda{
+
+left:10px;
+
+}
+
+
+
+.btn.derecha{
+
+right:10px;
 
 }
 
@@ -1092,9 +1114,9 @@ transition:.3s;
 
 .btn:hover{
 
-background:#6b1c28;
+background:rgba(255,255,255,.35);
 
-transform:scale(1.08);
+transform:translateY(-50%) scale(1.08);
 
 }
 
@@ -1146,9 +1168,9 @@ background:#8b2635;
 
 @media(max-width:600px){
 
-.contenedor-fotos{
+.carrusel{
 
-height:340px;
+max-width:300px;
 
 }
 
@@ -1158,7 +1180,7 @@ width:36px;
 
 height:36px;
 
-font-size:17px;
+font-size:16px;
 
 }
 
